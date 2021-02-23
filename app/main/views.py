@@ -23,7 +23,6 @@ def article(id):
     article = get_article(id)
     form = id.translate({ord('-'): None}).split(" ")
     id = " ".join(form).upper()
-    # print(s.translate({ord('a'): None}))
     return render_template('article.html',news = source_news, article = article,id=id)
 
 @main.route('/category/<tab>')

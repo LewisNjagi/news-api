@@ -34,11 +34,13 @@
             <div class="container-fluid">
                 <div class="card-columns">
                     {% for headlines in headlines %}
-                    <div class="card" style="width: 40rem;">
+                    <div class="card" style="width: 40rem; font-size: 15px;">
                         <img src="{{ headlines.urlToImage }}" class="card-img-top" alt="...">
                         <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
+                            <h5 class="card-title" style="font-size: 20px; font-weight: bold;">{{ headlines.title }}</h5>
                             <p class="card-text">{{ headlines.description }}</p>
+                            <p>Published At: {{ headlines.publishedAt }}</p>
+                            <hr>
                             <a href="{{ headlines.url }}" class="btn btn-primary">Read The Full Article</a>
                         </div>
                     </div>

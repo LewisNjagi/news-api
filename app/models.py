@@ -11,8 +11,9 @@ class Article:
     '''
     Article class to define Article objects
     '''
-    def __init__(self,description,urlToImage,publishedAt,url):
+    def __init__(self,description,urlToImage,publishedAt,url,title):
         self.description = description
         self.urlToImage = urlToImage
         self.publishedAt = publishedAt
         self.url = url
+        self.title = title
