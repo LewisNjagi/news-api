@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="{{ url_for('static',filename='css/navbar.css') }}">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css"
+  integrity="sha384-B0vP5xmATw1+K9KRQjQERJvTumQW0nPEzvF6L/Z6nronJ3oUOFUFpCjEUQouq2+l" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Merriweather+Sans:wght@300;400&display=swap" rel="stylesheet">
+
+<h1 class="head">WEN NEWS</h1>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup"
+    aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+    <div class="navbar-nav">
+      <div id="main">
+        <button class="openbtn" style="color: white; font-size: 20px; font-family: 'Merriweather Sans', sans-serif;"
+          onclick="openNav()">☰ News Sources</button>
+      </div>
+      <a class="nav-link active" href="/">Home <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="/category/business">Business</a>
+      <a class="nav-link" href="/category/entertainment">Entertainment</a>
+      <a class="nav-link" href="/category/general">General</a>
+      <a class="nav-link" href="/category/health">Health</a>
+      <a class="nav-link" href="/category/science">Science</a>
+      <a class="nav-link" href="/category/sports">Sports</a>
+      <a class="nav-link" href="/category/technology">Technology</a>
+    </div>
+  </div>
+</nav>
