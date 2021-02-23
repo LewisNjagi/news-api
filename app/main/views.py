@@ -21,7 +21,10 @@ def article(id):
 
     source_news = get_sources()
     article = get_article(id)
-    return render_template('article.html',news = source_news, article = article)
+    form = id.translate({ord('-'): None}).split(" ")
+    id = " ".join(form).upper()
+    # print(s.translate({ord('a'): None}))
+    return render_template('article.html',news = source_news, article = article,id=id)
 
 @main.route('/category/<tab>')
 def category(tab):
