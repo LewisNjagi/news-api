@@ -1,0 +1,25 @@
+.navbar {
+    color: rgb(193, 178, 171) !important;
+}
+.navbar-nav a {
+  font-size: 20px;
+  margin-left: 30px;
+  color: white;
+  font-family: 'Merriweather Sans', sans-serif;
+}
+.head {
+  font-size: 60px;
+  margin-left: 40px;
+  font-family: 'Montserrat', sans-serif;
+}
+#main {
+  transition: margin-left 0.5s;
+  padding: 3px;
+}
+.openbtn {
+  font-size: 20px;
+  cursor: pointer;
+  background-color: #343a40;
+  border: none;
+  display: block;
+}
