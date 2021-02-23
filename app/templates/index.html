@@ -39,9 +39,9 @@
                         <div class="card-body">
                             <h5 class="card-title" style="font-size: 20px; font-weight: bold;">{{ headlines.title }}</h5>
                             <p class="card-text">{{ headlines.description }}</p>
-                            <p>Published At: {{ headlines.publishedAt }}</p>
+                            <p class="card-text"><small class="text-muted">Published At: {{ headlines.publishedAt }}</small></p>
                             <hr>
-                            <a href="{{ headlines.url }}" class="btn btn-primary">Read The Full Article</a>
+                            <a href="{{ headlines.url }}" class="btn btn-primary btn-lg">Read The Full Article</a>
                         </div>
                     </div>
                     {% endfor %}
