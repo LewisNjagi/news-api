@@ -15,6 +15,9 @@ def index():
 
 @main.route('/articles/<id>')
 def article(id):
+    '''
+    articles page function that returns the articles page and its data
+    '''
 
     source_news = get_sources()
     article = get_article(id)
@@ -22,6 +25,9 @@ def article(id):
 
 @main.route('/category/<tab>')
 def category(tab):
+    '''
+    Category page function that returns the category page and its data
+    '''
 
     source_news = get_sources()
     category = get_category(tab)
