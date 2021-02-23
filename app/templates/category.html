@@ -1,7 +1,8 @@
 {% extends 'base.html'%}
+
 {% block styles %}
 {{ super() }}
-<link rel="stylesheet" href="{{ url_for('static',filename='css/article.css') }}">
+<link rel="stylesheet" href="{{ url_for('static',filename='css/category.css') }}">
 <script>
     function openNav() {
         document.getElementById("mySidebar").style.width = "250px";
@@ -24,7 +25,7 @@
 </div>
 <div class="container-fluid">
     <div class="card-columns">
-        {% for category in category%}
+        {% for category in category %}
         <a href="{{ category.url }}" style="color: inherit; text-decoration: none;">
             <div class="card" style="width: 40rem; font-size: 15px;">
                 <img src="{{ category.urlToImage }}" class="card-img-top" alt="...">
