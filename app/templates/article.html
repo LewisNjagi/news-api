@@ -33,16 +33,19 @@
 <div class="container-fluid">
     <div class="card-columns">
         {% for source_article in article %}
-        <div class="card" style="width: 40rem; font-size: 15px;">
-            <img src="{{ source_article.urlToImage }}" class="card-img-top" alt="...">
-            <div class="card-body">
-                <h5 class="card-title" style="font-size: 20px; font-weight: bold;">{{ source_article.title }}</h5>
-                <p class="card-text">{{ source_article.description }}</p>
-                <p class="card-text"><small class="text-muted">Published At: {{ source_article.publishedAt }}</small></p>
-                <hr>
-                <a href="{{ source_article.url }}" class="btn btn-primary btn-lg">Read The Full Article</a>
+        <a href="{{ source_article.url }}" style="color: inherit; text-decoration: none;">
+            <div class="card" style="width: 40rem; font-size: 15px;">
+                <img src="{{ source_article.urlToImage }}" class="card-img-top" alt="...">
+                <div class="card-body" style="margin-top: 10px;">
+                    <h5 class="card-title" style="font-size: 20px; font-weight: bold;">{{ source_article.title }}</h5>
+                    <p class="card-text">{{ source_article.description }}</p>
+                    <p class="card-text"><small class="text-muted">Posted:
+                            {{ source_article.publishedAt }}</small></p>
+                    <hr>
+                    <a href="{{ source_article.url }}" class="btn btn-primary btn-lg">Read The Full Article</a>
+                </div>
             </div>
-        </div>
+        </a>
         {% endfor %}
     </div>
 </div>

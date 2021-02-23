@@ -32,7 +32,27 @@
   margin-left: 50px;
 }
 .top {
-    font-family: 'Merriweather Sans', sans-serif;
-    text-align: center;
-    font-size: 40px;
+  font-family: "Merriweather Sans", sans-serif;
+  text-align: center;
+  font-size: 40px;
+}
+.card {
+  overflow: hidden;
+}
+.card-img-top {
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  transition: all 0.5s;
+}
+.card-img-top:hover {
+  -ms-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  -o-transform: scale(1.1);
+  transform: scale(1.1);
 }
