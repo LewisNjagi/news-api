@@ -14,7 +14,7 @@ def configure_request(app):
 
 def get_sources():
     '''
-    Function
+    Function that gets news sources
     '''
     get_sources_url = base_url.format(api_key)
 
@@ -31,6 +31,15 @@ def get_sources():
     return source_results
 
 def process_results(source_list):
+    '''
+    Function  that processes the news result and transform them to a list of Objects
+
+    Args:
+        source_list: A list of dictionaries that contain news source details
+
+    Returns :
+        source_results: A list of news source objects
+    '''
 
     source_results = []
     for source_item in source_list:
@@ -45,6 +54,9 @@ def process_results(source_list):
     return source_results
 
 def get_article(id):
+    '''
+    Function that gets news source articles by id of the news source
+    '''
     get_source_article_url = 'http://newsapi.org/v2/everything?sources={}&from=2021-01-29&sortBy=publishedAt&apiKey={}'.format(id,api_key)
 
     with urllib.request.urlopen(get_source_article_url) as url:
@@ -60,6 +72,15 @@ def get_article(id):
     return source_object
 
 def process_get_article(article_list):
+    '''
+    Function  that processes the articles result and transform them to a list of Objects
+
+    Args:
+        article_list: A list of dictionaries that contain movie details
+
+    Returns :
+        source_object: A list of news article objects
+    '''
     source_object = []
     for article in article_list:
         description = article.get('description')
@@ -75,6 +96,7 @@ def process_get_article(article_list):
 
 def get_headlines():
     '''
+    Function that gets news source articles headlines
     '''
     get_headlines_url = 'https://newsapi.org/v2/top-headlines?country=us&from=2021-01-29&sortBy=publishedAt&apiKey={}'.format(api_key)
 
@@ -91,6 +113,7 @@ def get_headlines():
 
 def get_category(tab):
     '''
+    Function that gets news source articles headlines by category
     '''
     get_category_url = 'https://newsapi.org/v2/top-headlines?country=us&category={}&from=2021-01-29&sortBy=publishedAt&apiKey={}'.format(tab,api_key)
 
