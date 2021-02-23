@@ -76,7 +76,7 @@ def process_get_article(article_list):
 def get_headlines():
     '''
     '''
-    get_headlines_url = 'https://newsapi.org/v2/top-headlines?country=us&&from=2021-01-29&sortBy=publishedAtapiKey={}'.format(api_key)
+    get_headlines_url = 'https://newsapi.org/v2/top-headlines?country=us&from=2021-01-29&sortBy=publishedAt&apiKey={}'.format(api_key)
 
     with urllib.request.urlopen(get_headlines_url) as url:
         get_headlines_data = url.read()
