@@ -1,0 +1,40 @@
+{% extends 'base.html'%}
+{% block styles %}
+{{ super() }}
+<link rel="stylesheet" href="{{ url_for('static',filename='css/article.css') }}">
+<script>
+    function openNav() {
+        document.getElementById("mySidebar").style.width = "250px";
+    }
+
+    function closeNav() {
+        document.getElementById("mySidebar").style.width = "0";
+        document.getElementById("main").style.marginLeft = "0";
+    }
+</script>
+{% endblock %}
+
+{% block content %}
+<div id="mySidebar" class="sidebar">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+    {% for source_news in news %}
+    <a href="/articles/{{source_news.id}}">
+        {{ source_news.name }}</a>
+    {% endfor %}
+</div>
+<div class="container-fluid">
+    <div class="card-columns">
+        {% for category in category%}
+        <div class="card" style="width: 40rem;">
+            <img src="{{ category.urlToImage }}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">Card title</h5>
+                <p class="card-text">{{ category.description }}</p>
+                <a href="{{ category.url }}" class="btn btn-primary">Read The Full Article</a>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+
+{% endblock %}
