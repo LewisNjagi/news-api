@@ -57,7 +57,7 @@ def get_article(id):
     '''
     Function that gets news source articles by id of the news source
     '''
-    get_source_article_url = 'http://newsapi.org/v2/everything?sources={}&from=2021-01-29&sortBy=publishedAt&apiKey={}'.format(id,api_key)
+    get_source_article_url = 'http://newsapi.org/v2/everything?sources={}&sortBy=publishedAt&apiKey={}'.format(id,api_key)
 
     with urllib.request.urlopen(get_source_article_url) as url:
         source_article_data = url.read()
@@ -99,7 +99,7 @@ def get_headlines():
     '''
     Function that gets news source articles headlines
     '''
-    get_headlines_url = 'https://newsapi.org/v2/top-headlines?country=us&from=2021-01-29&sortBy=publishedAt&apiKey={}'.format(api_key)
+    get_headlines_url = 'https://newsapi.org/v2/top-headlines?country=us&sortBy=publishedAt&apiKey={}'.format(api_key)
 
     with urllib.request.urlopen(get_headlines_url) as url:
         get_headlines_data = url.read()
@@ -116,7 +116,7 @@ def get_category(tab):
     '''
     Function that gets news source articles headlines by category
     '''
-    get_category_url = 'https://newsapi.org/v2/top-headlines?country=us&category={}&from=2021-01-29&sortBy=publishedAt&apiKey={}'.format(tab,api_key)
+    get_category_url = 'https://newsapi.org/v2/top-headlines?country=us&category={}&sortBy=publishedAt&apiKey={}'.format(tab,api_key)
 
     with urllib.request.urlopen(get_category_url) as url:
         get_category_data = url.read()
